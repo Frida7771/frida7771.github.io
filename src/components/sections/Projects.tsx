@@ -257,7 +257,7 @@ const projects = [
   {
     id: 1,
     title: "Jobhand",
-    description: "A comprehensive job search and application platform with advanced filtering and matching algorithms. Features include intelligent job recommendations, application tracking, and seamless integration with multiple job boards.",
+    description: "A MERN-based job tracking platform with OAuth login, real-time CRUD operations, and cloud deployment for a smooth and secure user experience.",
     image: "/images/Jobhand.jpg",
     techStack: ["React", "Node.js", "MongoDB", "Express"],
     githubUrl: "https://github.com/Frida7771/jobhand",
@@ -265,7 +265,7 @@ const projects = [
   {
     id: 2,
     title: "Flavor Lab",
-    description: "An innovative recipe discovery and meal planning application with AI-powered recommendations. Users can explore new cuisines, plan weekly meals, and get personalized recipe suggestions based on dietary preferences.",
+    description: "A full-stack food sharing and recipe management platform designed for community-driven cooking inspiration. Users can create, manage, and share recipes through an intuitive interface with secure authentication and admin moderation.",
     image: "/images/FlavorLab.jpg",
     techStack: ["React", "Python", "TensorFlow", "PostgreSQL"],
     githubUrl: "https://github.com/Frida7771/Flavor-Lab",
@@ -273,7 +273,7 @@ const projects = [
   {
     id: 3,
     title: "Health Manager",
-    description: "A comprehensive health tracking and wellness management system with personalized insights. Features include activity tracking, nutrition monitoring, sleep analysis, and AI-driven health recommendations.",
+    description: "A health management platform built with Java Spring Boot and Vue.js, offering features like personalized health record tracking, secure file uploads, interactive data visualization, and AI-powered health news and recommendations. Includes JWT-based authentication and efficient search with trie-structured indexing.",
     image: "/images/Health_mainPage.jpg",
     techStack: ["React Native", "Firebase", "HealthKit", "TypeScript"],
     githubUrl: "https://github.com/Frida7771/HealthManger",
