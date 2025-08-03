@@ -7,7 +7,6 @@ import { useRef } from 'react';
 
 const FaBriefcase = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaBriefcase })));
 const FaCalendar = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaCalendar })));
-const FaMapMarkerAlt = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaMapMarkerAlt })));
 
 const ExperienceSection = styled.section`
   min-height: 100vh;
@@ -73,36 +72,35 @@ const IconWrapper = styled.div`
 
 const ExperienceContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  flex-direction: column;
   gap: ${theme.spacing.lg};
   width: 100%;
-  
-  @media (max-width: ${theme.breakpoints.md}) {
-    flex-direction: column;
-    align-items: center;
-  }
+  max-width: 800px;
+  margin: 0 auto;
 `;
 
 const ExperienceItem = styled(motion.div)`
-  flex: 1;
   width: 100%;
-  height: 450px;
-  
-  @media (max-width: ${theme.breakpoints.md}) {
-    height: auto;
-    margin-bottom: ${theme.spacing.xl};
-  }
 `;
 
-const ExperienceCard = styled(motion.div)`
-  background: linear-gradient(135deg, rgba(0, 150, 136, 0.9), rgba(0, 150, 136, 0.7));
+const ExperienceCard = styled(motion.div)<{ colorTheme: string }>`
+  background: ${props => {
+    switch(props.colorTheme) {
+      case 'zealquest':
+        return 'linear-gradient(135deg, rgba(147, 112, 219, 0.9), rgba(75, 0, 130, 0.8))';
+      case 'beituo':
+        return 'linear-gradient(135deg, rgba(255, 140, 0, 0.9), rgba(255, 69, 0, 0.8))';
+      case 'biomerieux':
+        return 'linear-gradient(135deg, rgba(70, 130, 180, 0.9), rgba(25, 25, 112, 0.8))';
+      default:
+        return 'linear-gradient(135deg, rgba(147, 112, 219, 0.9), rgba(75, 0, 130, 0.8))';
+    }
+  }};
   border-radius: 16px;
   padding: ${theme.spacing.lg};
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all ${theme.transitions.default};
   width: 100%;
-  height: 100%;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -115,7 +113,18 @@ const ExperienceCard = styled(motion.div)`
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 150, 136, 0.3);
+    box-shadow: ${props => {
+      switch(props.colorTheme) {
+        case 'zealquest':
+          return '0 12px 40px rgba(147, 112, 219, 0.3)';
+        case 'beituo':
+          return '0 12px 40px rgba(255, 140, 0, 0.3)';
+        case 'biomerieux':
+          return '0 12px 40px rgba(70, 130, 180, 0.3)';
+        default:
+          return '0 12px 40px rgba(147, 112, 219, 0.3)';
+      }
+    }};
   }
 
   &::before {
@@ -137,11 +146,11 @@ const JobHeader = styled.div`
   margin-bottom: ${theme.spacing.md};
 `;
 
-const CompanyLogo = styled.div<{ color: string }>`
+const CompanyLogo = styled.div<{ color: string; isImage?: boolean }>`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: ${props => props.color};
+  background: ${props => props.isImage ? 'transparent' : props.color};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,6 +158,14 @@ const CompanyLogo = styled.div<{ color: string }>`
   font-size: 1.2rem;
   color: white;
   flex-shrink: 0;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+  }
 `;
 
 const JobInfo = styled.div`
@@ -171,11 +188,17 @@ const CompanyName = styled.h4`
 
 const JobMeta = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: ${theme.spacing.sm};
+  align-items: center;
+  gap: ${theme.spacing.md};
   margin-bottom: ${theme.spacing.md};
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
+  
+  @media (max-width: ${theme.breakpoints.sm}) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: ${theme.spacing.sm};
+  }
 `;
 
 const MetaItem = styled.div`
@@ -198,7 +221,7 @@ const JobDescription = styled.div`
 `;
 
 const TechStack = styled.div`
-  margin-top: auto;
+  margin-top: ${theme.spacing.md};
   display: flex;
   flex-wrap: wrap;
   gap: ${theme.spacing.xs};
@@ -222,42 +245,43 @@ const TechTag = styled.span`
 const Experience = () => {
   const experiences = [
     {
-      title: "System Engineer",
-      company: "Infosys",
-      companyLogo: "I",
-      logoColor: "#0066cc",
-      location: "Bangalore, India",
-      period: "January 2021 - April 2022",
+      title: "Software Engineer",
+      company: "ZealQuest Scientific Technology",
+      period: "January 2024 - August 2024",
       description: [
-        "Developed a responsive and dynamic digital library housing over 100 e-books and journals using Reactjs, ReactMUI and PostgreSQL."
+        "Designed the backend of an IoT plant monitoring system using TypeScript and Node.js, supporting over 3 smart agriculture services"
       ],
-      tech: ["React", "React MUI", "PostgreSQL", "JavaScript"]
+      tech: ["Koa2", "Typescript", "PostgreSQL", "Next.js"],
+      logoColor: "#0066CC",
+      companyLogo: "泽泉",
+      isImage: true,
+      colorTheme: 'zealquest'
     },
     {
-      title: "Assistant System Engineer",
-      company: "TCS",
-      companyLogo: "T",
-      logoColor: "#ffffff",
-      location: "Mumbai, India",
-      period: "January 2020 - June 2020",
+      title: "Software Engineer Intern",
+      company: "Beituo Paper",
+      period: "June 2023 - December 2023",
       description: [
-        "Transformed mainframe software into a web app for a major American grocery company. Embracing test-driven development using React testing library."
+        "Contributed on transforming mainframe software into a web app for a paper company. Embracing test-driven development using JUnit."
       ],
-      tech: ["React", "Testing Library", "Mainframe", "Web Development"]
+      tech: ["React", "Java", "Mysql", "Web Development"],
+      logoColor: "#8B4513",
+      companyLogo: "Beituo",
+      isImage: true,
+      colorTheme: 'beituo'
     },
     {
-      title: "Junior Developer",
-      company: "Digital Solutions Ltd.",
-      companyLogo: "D",
-      logoColor: "#ff6b6b",
-      location: "New York, NY",
-      period: "2018 - 2020",
+      title: "Data Analyst Intern",
+      company: "BioMérieux",
+      period: "February 2023 - April 2023",
       description: [
-        "Developed responsive web applications using HTML, CSS, and JavaScript",
-        "Worked with design teams to implement pixel-perfect UI components",
-        "Participated in agile development processes and sprint planning"
+        "Conducted data analysis at a medical diagnostics company and support decision-making for 1400+ healthcare clients."
       ],
-      tech: ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap"]
+      tech: ["Data Analysis", "T-SQL", "SQL Server"],
+      logoColor: "#4A90E2",
+      companyLogo: "biomerieux",
+      isImage: true,
+      colorTheme: 'biomerieux'
     }
   ];
 
@@ -322,10 +346,18 @@ const Experience = () => {
                       initial="hidden"
                       animate={isInView ? "visible" : "hidden"}
                       transition={{ delay: index * 0.2 }}
+                      colorTheme={exp.colorTheme}
                     >
                       <JobHeader>
-                        <CompanyLogo color={exp.logoColor}>
-                          {exp.companyLogo}
+                        <CompanyLogo color={exp.logoColor} isImage={exp.isImage}>
+                                                     {exp.isImage ? (
+                             <img src={`/images/${exp.companyLogo}.${exp.companyLogo === 'Beituo' ? 'jpg' : exp.companyLogo === 'biomerieux' ? 'svg' : 'png'}`} alt={exp.company} onError={(e) => {
+                               console.error('Failed to load logo:', e);
+                               e.currentTarget.style.display = 'none';
+                             }} />
+                           ) : (
+                             exp.companyLogo
+                           )}
                         </CompanyLogo>
                         <JobInfo>
                           <JobTitle>{exp.title}</JobTitle>
@@ -339,12 +371,6 @@ const Experience = () => {
                             <FaCalendar />
                           </Suspense>
                           {exp.period}
-                        </MetaItem>
-                        <MetaItem>
-                          <Suspense fallback={<div>...</div>}>
-                            <FaMapMarkerAlt />
-                          </Suspense>
-                          {exp.location}
                         </MetaItem>
                       </JobMeta>
                       

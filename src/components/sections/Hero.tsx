@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { theme } from '../../styles/theme';
 import { keyframes } from '@emotion/react';
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense } from 'react';
 import boPhoto from '../../assets/images/Bo.jpg';
 const FaGithub = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaGithub })));
 const FaLinkedin = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaLinkedin })));
@@ -245,7 +245,7 @@ export const Hero = () => {
           
           <SocialLinks aria-label="Social media links">
             <a 
-              href="https://github.com" 
+              href="https://github.com/Frida7771" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Visit my GitHub profile"
@@ -256,7 +256,7 @@ export const Hero = () => {
               <span className="sr-only">GitHub</span>
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/frida-li/" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Visit my LinkedIn profile"
@@ -267,7 +267,7 @@ export const Hero = () => {
               <span className="sr-only">LinkedIn</span>
             </a>
             <a 
-              href="mailto:your.email@example.com"
+              href="mailto:li.bo10@northeastern.edu"
               aria-label="Send me an email"
             >
               <Suspense fallback={<div style={{ width: '1.5rem', height: '1.5rem' }} />}>

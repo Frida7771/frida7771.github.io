@@ -10,7 +10,6 @@ import styled from '@emotion/styled';
 // Lazy load non-critical components
 const Projects = lazy(() => import('./components/sections/Projects'));
 const Experience = lazy(() => import('./components/sections/Experience'));
-const Skills = lazy(() => import('./components/sections/Skills'));
 const Contact = lazy(() => import('./components/sections/Contact'));
 
 // Loading fallback component
@@ -45,9 +44,6 @@ function App() {
         </Suspense>
         <Suspense fallback={<LoadingFallback>Loading experience...</LoadingFallback>}>
           <Experience />
-        </Suspense>
-        <Suspense fallback={<LoadingFallback>Loading skills...</LoadingFallback>}>
-          <Skills />
         </Suspense>
         <Suspense fallback={<LoadingFallback>Loading contact...</LoadingFallback>}>
           <Contact />

@@ -250,7 +250,7 @@ const Contact = () => {
               <span>li.bo10@northeastern.edu</span>
             </ContactEmail>
             <DownloadResumeButton 
-              href="https://drive.google.com/uc?export=download&id=18X-VneIEKrMatlO0cMVGPfgOAqOEAnAl"
+              href="https://drive.google.com/file/d/18X-VneIEKrMatlO0cMVGPfgOAqOEAnAl/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               variants={itemVariants}
@@ -267,7 +267,7 @@ const Contact = () => {
               aria-label="Social media links"
             >
               <SocialLink 
-                href="https://github.com"
+                href="https://github.com/Frida7771"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -5 }}
@@ -278,7 +278,7 @@ const Contact = () => {
                 <span className="sr-only">GitHub</span>
               </SocialLink>
               <SocialLink 
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/frida-li/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -5 }}

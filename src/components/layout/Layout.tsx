@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { ReactNode, useEffect } from 'react';
 import { theme } from '../../styles/theme';
 import { FloatingNav } from '../navigation/FloatingNav';
@@ -48,7 +48,7 @@ const LayoutWrapper = styled.div`
     bottom: 0;
     background: radial-gradient(
       circle at 70% 30%,
-      ${theme.colors.accent}15 0%,
+      ${theme.colors.accent}08 0%,
       transparent 100%
     );
     pointer-events: none;
@@ -90,12 +90,12 @@ const Nav = styled.nav`
   }
 `;
 
-const Logo = styled(motion.div)`
-  color: ${theme.colors.light};
-  font-family: ${theme.fonts.heading};
-  font-size: 1.5rem;
-  font-weight: 700;
-`;
+// // const Logo = styled(motion.div)`
+//   color: ${theme.colors.light};
+//   font-family: ${theme.fonts.heading};
+//   font-size: 1.5rem;
+//   font-weight: 700;
+// `;
 
 const NavLinks = styled.div`
   display: flex;
@@ -166,6 +166,28 @@ const Footer = styled.footer`
   }
 `;
 
+const FooterContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: ${theme.spacing.sm};
+`;
+
+const FridaLogo = styled.div`
+  font-family: ${theme.fonts.heading};
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: ${theme.colors.accent};
+  letter-spacing: 1px;
+  text-transform: uppercase;
+`;
+
+const FooterText = styled.p`
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0;
+`;
+
 export const Layout = ({ children }: LayoutProps) => {
   useKeyboardNavigation();
 
@@ -205,7 +227,10 @@ export const Layout = ({ children }: LayoutProps) => {
       <FloatingNav />
       <Footer role="contentinfo">
         <div className="container">
-          <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <FooterContent>
+            <FridaLogo>@Frida</FridaLogo>
+            <FooterText>I am my own muse.</FooterText>
+          </FooterContent>
         </div>
       </Footer>
     </LayoutWrapper>

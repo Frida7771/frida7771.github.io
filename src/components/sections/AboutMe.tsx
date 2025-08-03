@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { theme } from '../../styles/theme';
 import { keyframes } from '@emotion/react';
 import { lazy, Suspense } from 'react';
+import { motion } from 'framer-motion';
 
 const FaUser = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaUser })));
 
@@ -88,43 +89,111 @@ const AboutText = styled.div`
   }
 `;
 
-const PersonalInfo = styled.div`
+const SkillsSection = styled.div`
   animation: ${fadeUpKeyframes} 0.5s ease-out 0.4s forwards;
   opacity: 0;
   margin-top: ${theme.spacing.xl};
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: ${theme.spacing.lg};
 `;
 
-const InfoCard = styled.div`
+const SkillsTitle = styled.h3`
+  color: ${theme.colors.accent};
+  font-size: 1.5rem;
+  margin-bottom: ${theme.spacing.lg};
+  text-align: center;
+  font-weight: 600;
+`;
+
+const SkillsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: ${theme.spacing.lg};
+  max-width: 800px;
+  margin: 0 auto;
+  
+  @media (min-width: ${theme.breakpoints.md}) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: ${theme.spacing.xl};
+  }
+`;
+
+const SkillCard = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: ${theme.spacing.md};
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
-  padding: ${theme.spacing.md};
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all ${theme.transitions.default};
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-5px);
     border-color: ${theme.colors.accent};
+    box-shadow: 0 8px 25px rgba(246, 177, 122, 0.2);
   }
+`;
 
-  h3 {
-    color: ${theme.colors.accent};
-    font-size: 1.1rem;
-    margin-bottom: ${theme.spacing.sm};
-    font-weight: 600;
+const SkillIcon = styled.div`
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all ${theme.transitions.default};
   }
-
-  p {
-    color: ${theme.colors.textLight};
-    opacity: 0.8;
-    font-size: 0.95rem;
-    margin: 0;
+  
+  svg {
+    width: 100%;
+    height: 100%;
+    color: ${theme.colors.light};
   }
 `;
 
 export const AboutMe = () => {
+  const skills = [
+    { icon: 'javascript.svg' },
+    { icon: 'react.svg' },
+    { icon: 'nodejs.svg' },
+    { icon: 'python.svg' },
+    { icon: 'Java.svg' },
+    { icon: 'mongodb.svg' },
+    { icon: 'Postgresql.svg' },
+    { icon: 'aws.svg' },
+    { icon: 'htmlCss.svg' },
+    { icon: 'express.png' },
+    { icon: 'react-native.png' },
+    { icon: 'redux.svg' }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <AboutSection id="about">
       <div className="container">
@@ -141,14 +210,13 @@ export const AboutMe = () => {
           <AboutText>
             <p>
               I am currently pursuing my master's degree at Northeastern University. 
-              I bring nearly two years of industry experience in web development to the table 。
+              I bring nearly two years of industry experience in web development to the table.
               I'm driven by a constant quest for knowledge, diving into intriguing technologies to further evolve my skill set.
             </p>
             <p>
-              I am currently working on a cloud infrastructure automation project designed to streamline web application deployment and scalability. 
-              This platform leverages AWS services to ensure high availability and secure data storage for production environments. 
-              It automates the provisioning of EC2, RDS, and S3 resources using Terraform, while GitHub Actions and Packer are integrated to standardize infrastructure builds and accelerate deployment workflows. 
-              The goal is to reduce manual DevOps effort and ensure a reliable, autoscaling backend for modern web applications.
+              I am currently working on a cloud infrastructure automation project to streamline web application deployment. 
+              It leverages AWS (EC2, RDS, S3), automates provisioning with Terraform, and integrates GitHub Actions and Packer to standardize builds and speed up deployments. 
+              The goal is to reduce manual DevOps effort and ensure a reliable backend for modern web applications.
             </p>
             <p> 
               Beyond my professional endeavors, I find balance and joy through playing the piano, 
@@ -156,24 +224,37 @@ export const AboutMe = () => {
             </p>
           </AboutText>
 
-          <PersonalInfo>
-            <InfoCard>
-              <h3>Education</h3>
-              <p>Master's in Software Engineering</p>
-              <p>Northeastern University</p>
-            </InfoCard>
-            <InfoCard>
-              <h3>Location</h3>
-              <p>Boston, MA</p>
-              <p>Open to relocation</p>
-            </InfoCard>
-            <InfoCard>
-              <h3>Interests</h3>
-              <p>Web Developer</p>
-              <p>Software Engineer</p>
-            </InfoCard>
-            
-          </PersonalInfo>
+          <SkillsSection>
+            <SkillsTitle>Here are some technical skills I am proficient at</SkillsTitle>
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <SkillsGrid>
+                {skills.map((skill) => (
+                  <SkillCard
+                    key={skill.icon}
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <SkillIcon>
+                      <img 
+                        src={`/images/${skill.icon}`} 
+                        alt=""
+                        onError={(e) => {
+                          console.error('Failed to load skill icon:', skill.icon);
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
+                    </SkillIcon>
+                  </SkillCard>
+                ))}
+              </SkillsGrid>
+            </motion.div>
+          </SkillsSection>
         </AboutContent>
       </div>
     </AboutSection>
