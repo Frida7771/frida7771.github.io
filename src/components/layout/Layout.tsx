@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { ReactNode, useEffect } from 'react';
 import { theme } from '../../styles/theme';
 import { FloatingNav } from '../navigation/FloatingNav';
@@ -90,12 +90,12 @@ const Nav = styled.nav`
   }
 `;
 
-const Logo = styled(motion.div)`
-  color: ${theme.colors.light};
-  font-family: ${theme.fonts.heading};
-  font-size: 1.5rem;
-  font-weight: 700;
-`;
+// const Logo = styled(motion.div)`
+//   color: ${theme.colors.light};
+//   font-family: ${theme.fonts.heading};
+//   font-size: 1.5rem;
+//   font-weight: 700;
+// `;
 
 const NavLinks = styled.div`
   display: flex;
