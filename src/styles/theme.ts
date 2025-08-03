@@ -1,25 +1,25 @@
 export const theme = {
   colors: {
-    primary: '#1A1B26',
-    secondary: '#2E3440',
+    primary: '#0F0F0F',
+    secondary: '#1A1A1A',
     accent: '#F6B17A',
     light: '#F6B17A',
     text: '#ffffff',
     textLight: '#ffffff',
-    textDark: '#1A1B26',
+    textDark: '#0F0F0F',
     glass: {
-      background: 'rgba(255, 255, 255, 0.03)',
+      background: 'rgba(255, 255, 255, 0.02)',
       border: 'transparent',
-      card: 'rgba(26, 27, 38, 0.3)',
+      card: 'rgba(15, 15, 15, 0.4)',
     },
     gradient: {
-      main: 'linear-gradient(135deg, #1A1B26 0%, #2E3440 50%, #1A1B26 100%)',
+      main: 'linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 50%, #0F0F0F 100%)',
       accent: 'linear-gradient(135deg, #F6B17A 0%, #f8c396 100%)',
-      glass: 'linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%)',
+      glass: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
     },
     overlay: {
-      light: 'rgba(255, 255, 255, 0.08)',
-      dark: 'rgba(26, 27, 38, 0.4)',
+      light: 'rgba(255, 255, 255, 0.05)',
+      dark: 'rgba(15, 15, 15, 0.5)',
     }
   },
   fonts: {

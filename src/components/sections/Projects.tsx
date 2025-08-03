@@ -267,7 +267,7 @@ const projects = [
     title: "Flavor Lab",
     description: "A full-stack food sharing and recipe management platform designed for community-driven cooking inspiration. Users can create, manage, and share recipes through an intuitive interface with secure authentication and admin moderation.",
     image: "/images/FlavorLab.jpg",
-    techStack: ["React", "Python", "TensorFlow", "PostgreSQL"],
+    techStack: ["React", "Typescript", "OAuth", "MongoDB"],
     githubUrl: "https://github.com/Frida7771/Flavor-Lab",
   },
   {
@@ -275,7 +275,7 @@ const projects = [
     title: "Health Manager",
     description: "A health management platform built with Java Spring Boot and Vue.js, offering features like personalized health record tracking, secure file uploads, interactive data visualization, and AI-powered health news and recommendations. Includes JWT-based authentication and efficient search with trie-structured indexing.",
     image: "/images/Health_mainPage.jpg",
-    techStack: ["React Native", "Firebase", "HealthKit", "TypeScript"],
+    techStack: ["Springboot", "Vue.js", "Algorithm", "Java"],
     githubUrl: "https://github.com/Frida7771/HealthManger",
   },
 ];

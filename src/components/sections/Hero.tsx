@@ -239,7 +239,7 @@ export const Hero = () => {
           
           <SloganSection>
             <Slogan>
-              Turning ideas into reality with code, creativity, and machine intelligence.
+             Turning ideas into reality with code, creativity, and problem-solving.
             </Slogan>
           </SloganSection>
           

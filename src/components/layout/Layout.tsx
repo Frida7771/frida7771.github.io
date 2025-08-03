@@ -48,7 +48,7 @@ const LayoutWrapper = styled.div`
     bottom: 0;
     background: radial-gradient(
       circle at 70% 30%,
-      ${theme.colors.accent}08 0%,
+      ${theme.colors.accent}05 0%,
       transparent 100%
     );
     pointer-events: none;

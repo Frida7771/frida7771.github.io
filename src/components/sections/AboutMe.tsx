@@ -136,7 +136,7 @@ const SkillCard = styled(motion.div)`
   }
 `;
 
-const SkillIcon = styled.div`
+const SkillIcon = styled.div<{ skillName?: string }>`
   width: 50px;
   height: 50px;
   display: flex;
@@ -148,6 +148,15 @@ const SkillIcon = styled.div`
     height: 100%;
     object-fit: contain;
     transition: all ${theme.transitions.default};
+    filter: ${props => {
+      if (props.skillName === 'aws') {
+        return 'brightness(1.2) contrast(1.3)';
+      }
+      if (props.skillName === 'nodejs') {
+        return 'brightness(1.1) contrast(1.2)';
+      }
+      return 'none';
+    }};
   }
   
   svg {
@@ -159,18 +168,18 @@ const SkillIcon = styled.div`
 
 export const AboutMe = () => {
   const skills = [
-    { icon: 'javascript.svg' },
-    { icon: 'react.svg' },
-    { icon: 'nodejs.svg' },
-    { icon: 'python.svg' },
-    { icon: 'Java.svg' },
-    { icon: 'mongodb.svg' },
-    { icon: 'Postgresql.svg' },
-    { icon: 'aws.svg' },
-    { icon: 'htmlCss.svg' },
-    { icon: 'express.png' },
-    { icon: 'react-native.png' },
-    { icon: 'redux.svg' }
+    { icon: 'javascript.svg', name: 'javascript' },
+    { icon: 'react.svg', name: 'react' },
+    { icon: 'nodejs.svg', name: 'nodejs' },
+    { icon: 'python.svg', name: 'python' },
+    { icon: 'Java.svg', name: 'java' },
+    { icon: 'mongodb.svg', name: 'mongodb' },
+    { icon: 'Postgresql.svg', name: 'postgresql' },
+    { icon: 'aws.svg', name: 'aws' },
+    { icon: 'htmlCss.svg', name: 'htmlcss' },
+    { icon: 'express.png', name: 'express' },
+    { icon: 'react-native.png', name: 'react-native' },
+    { icon: 'redux.svg', name: 'redux' }
   ];
 
   const containerVariants = {
@@ -209,9 +218,9 @@ export const AboutMe = () => {
           
           <AboutText>
             <p>
-              I am currently pursuing my master's degree at Northeastern University. 
-              I bring nearly two years of industry experience in web development to the table.
-              I'm driven by a constant quest for knowledge, diving into intriguing technologies to further evolve my skill set.
+            I am pursuing my master's degree at Northeastern University. 
+            I have over 1.5 years of experience in software engineering and web development. 
+            I enjoy exploring new technologies and improving my skills through hands-on projects and real-world challenges.
             </p>
             <p>
               I am currently working on a cloud infrastructure automation project to streamline web application deployment. 
@@ -240,7 +249,7 @@ export const AboutMe = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <SkillIcon>
+                    <SkillIcon skillName={skill.name}>
                       <img 
                         src={`/images/${skill.icon}`} 
                         alt=""
