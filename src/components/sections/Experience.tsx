@@ -262,7 +262,7 @@ const Experience = () => {
       company: "Beituo Paper",
       period: "June 2023 - December 2023",
       description: [
-        "Contributed on transforming mainframe software into a web app for a paper company. Embracing test-driven development using JUnit."
+        "Contributed to the transformation of a legacy warehouse inventory system into a modular web app for a paper manufacturing company, while embracing test-driven development with JUnit."
       ],
       tech: ["React", "Java", "Mysql", "Web Development"],
       logoColor: "#8B4513",
