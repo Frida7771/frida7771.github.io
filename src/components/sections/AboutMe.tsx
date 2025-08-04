@@ -219,7 +219,7 @@ export const AboutMe = () => {
           <AboutText>
             <p>
             I am pursuing my master's degree at Northeastern University. 
-            I have over 1.5 years of experience in software engineering and web development. 
+            I have over 2 years of experience in software engineering and web development. 
             I enjoy exploring new technologies and improving my skills through hands-on projects and real-world challenges.
             </p>
             <p>
