@@ -70,72 +70,165 @@ const IconWrapper = styled.div`
   font-size: 2rem;
 `;
 
-const ExperienceContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${theme.spacing.lg};
+// 时间轴容器
+const TimelineContainer = styled.div`
+  position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  padding: ${theme.spacing.xl} 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      ${theme.colors.accent},
+      ${theme.colors.accent},
+      transparent
+    );
+    transform: translateX(-50%);
+    z-index: 1;
+
+    @media (max-width: ${theme.breakpoints.md}) {
+      left: 30px;
+      transform: none;
+    }
+  }
 `;
 
-const ExperienceItem = styled(motion.div)`
+// 时间轴项目
+const TimelineItem = styled(motion.div)`
+  position: relative;
+  margin-bottom: ${theme.spacing.xl};
   width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: ${theme.breakpoints.md}) {
+    &:nth-child(odd) {
+      .timeline-content {
+        margin-left: 0;
+        margin-right: calc(50% + ${theme.spacing.lg});
+        text-align: left;
+      }
+      
+      .timeline-dot {
+        left: calc(50% - 15px);
+      }
+    }
+
+    &:nth-child(even) {
+      .timeline-content {
+        margin-left: calc(50% + ${theme.spacing.lg});
+        margin-right: 0;
+        text-align: left;
+      }
+      
+      .timeline-dot {
+        right: calc(50% - 15px);
+        left: auto;
+      }
+    }
+  }
+
+  @media (max-width: ${theme.breakpoints.md}) {
+    .timeline-content {
+      margin-left: 60px;
+      margin-right: 0;
+      text-align: left;
+    }
+    
+    .timeline-dot {
+      left: 15px;
+    }
+  }
 `;
 
-const ExperienceCard = styled(motion.div)<{ colorTheme: string }>`
+// 时间轴圆点
+const TimelineDot = styled(motion.div)<{ colorTheme: string }>`
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   background: ${props => {
     switch(props.colorTheme) {
       case 'zealquest':
-        return 'linear-gradient(135deg, rgba(147, 112, 219, 0.9), rgba(75, 0, 130, 0.8))';
+        return 'linear-gradient(135deg, #9370DB, #4B0082)';
       case 'beituo':
-        return 'linear-gradient(135deg, rgba(255, 140, 0, 0.9), rgba(255, 69, 0, 0.8))';
+        return 'linear-gradient(135deg, #FF8C00, #FF4500)';
       case 'biomerieux':
-        return 'linear-gradient(135deg, rgba(70, 130, 180, 0.9), rgba(25, 25, 112, 0.8))';
+        return 'linear-gradient(135deg, #4682B4, #191970)';
+      case 'tietong':
+        return 'linear-gradient(135deg, #1E3A8A, #0F172A)';
       default:
-        return 'linear-gradient(135deg, rgba(147, 112, 219, 0.9), rgba(75, 0, 130, 0.8))';
+        return 'linear-gradient(135deg, #9370DB, #4B0082)';
     }
   }};
+  border: 3px solid ${theme.colors.primary};
+  box-shadow: 0 0 0 3px ${theme.colors.accent};
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+`;
+
+// 时间轴内容
+const TimelineContent = styled.div`
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   padding: ${theme.spacing.lg};
   border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   transition: all ${theme.transitions.default};
-  width: 100%;
   position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
 
   @media (min-width: ${theme.breakpoints.md}) {
     padding: ${theme.spacing.xl};
   }
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: ${props => {
-      switch(props.colorTheme) {
-        case 'zealquest':
-          return '0 12px 40px rgba(147, 112, 219, 0.3)';
-        case 'beituo':
-          return '0 12px 40px rgba(255, 140, 0, 0.3)';
-        case 'biomerieux':
-          return '0 12px 40px rgba(70, 130, 180, 0.3)';
-        default:
-          return '0 12px 40px rgba(147, 112, 219, 0.3)';
-      }
-    }};
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   }
 
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
-    pointer-events: none;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+
+    @media (min-width: ${theme.breakpoints.md}) {
+      &:nth-child(odd) & {
+        right: -10px;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent rgba(255, 255, 255, 0.05);
+      }
+
+      &:nth-child(even) & {
+        left: -10px;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent rgba(255, 255, 255, 0.05) transparent transparent;
+      }
+    }
+
+    @media (max-width: ${theme.breakpoints.md}) {
+      left: -10px;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent rgba(255, 255, 255, 0.05) transparent transparent;
+    }
   }
 `;
 
@@ -245,22 +338,22 @@ const TechTag = styled.span`
 const Experience = () => {
   const experiences = [
     {
-      title: "Software Engineer",
-      company: "ZealQuest Scientific Technology",
-      period: "January 2024 - August 2024",
+      title: "QA Software Engineer Intern",
+      company: "Tietong Telecommunications",
+      period: "October 2020 - December 2020",
       description: [
-        "Designed the backend of an IoT plant monitoring system using TypeScript and Node.js, supporting over 3 smart agriculture services"
+        "Performed comprehensive software testing and quality assurance for OSS systems, ensuring high reliability and performance standards."
       ],
-      tech: ["Koa2", "Typescript", "PostgreSQL", "Next.js"],
-      logoColor: "#0066CC",
-      companyLogo: "泽泉",
+      tech: ["Software Testing", "Selenium", "Jenkins", "Java"],
+      logoColor: "#1E3A8A",
+      companyLogo: "Tietoong",
       isImage: true,
-      colorTheme: 'zealquest'
+      colorTheme: 'tietong'
     },
     {
-      title: "Software Engineer Intern",
+      title: "Software Engineer",
       company: "Beituo Paper",
-      period: "June 2023 - December 2023",
+      period: "June 2021 - September 2022",
       description: [
         "Contributed to the transformation of a legacy warehouse inventory system into a modular web app for a paper manufacturing company, while embracing test-driven development with JUnit."
       ],
@@ -275,13 +368,26 @@ const Experience = () => {
       company: "BioMérieux",
       period: "February 2023 - April 2023",
       description: [
-        "Conducted data analysis at a medical diagnostics company and support decision-making for 1400+ healthcare clients."
+        "Conducted data analysis at a medical diagnostics company,supporting decision-making for 1400+ healthcare clients."
       ],
       tech: ["Data Analysis", "T-SQL", "SQL Server"],
       logoColor: "#4A90E2",
       companyLogo: "biomerieux",
       isImage: true,
       colorTheme: 'biomerieux'
+    },
+    {
+      title: "Software Engineer",
+      company: "China Mobile",
+      period: "July 2023 - August 2024",
+      description: [
+        "Optimized IoT data data pipeline achieving 99.5% success rate, while accelerating API debugging by 30% using Spring Boot factory patterns."
+      ],
+      tech: ["Python", "Springboot", "PostgreSQL", "Agile"],
+      logoColor: "#0066CC",
+      companyLogo: "ChinaMobile",
+      isImage: true,
+      colorTheme: 'zealquest'
     }
   ];
 
@@ -290,7 +396,7 @@ const Experience = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3,
+        staggerChildren: 0.4,
       },
     },
   };
@@ -305,6 +411,23 @@ const Experience = () => {
       opacity: 1,
       y: 0,
       scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      },
+    },
+  };
+
+  const dotVariants = {
+    hidden: { 
+      opacity: 0, 
+      scale: 0,
+      rotate: -180
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      rotate: 0,
       transition: {
         duration: 0.6,
         ease: "easeOut"
@@ -322,7 +445,7 @@ const Experience = () => {
                 <FaBriefcase />
               </Suspense>
             </IconWrapper>
-            <SectionTitle>Experience</SectionTitle>
+            <SectionTitle>Experience Timeline</SectionTitle>
           </SectionHeader>
           
           <motion.div
@@ -331,33 +454,42 @@ const Experience = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
-            <ExperienceContainer>
+            <TimelineContainer>
               {experiences.map((exp, index) => {
                 const ref = useRef(null);
-                const isInView = useInView(ref, { once: true, margin: "-100px" });
+                const isInView = useInView(ref, { once: true, margin: "-50px" });
 
                 return (
-                  <ExperienceItem 
+                  <TimelineItem 
                     key={index} 
                     ref={ref}
                     variants={itemVariants}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                    transition={{ delay: index * 0.3 }}
                   >
-                    <ExperienceCard
+                    <TimelineDot 
+                      className="timeline-dot"
+                      colorTheme={exp.colorTheme}
+                      variants={dotVariants}
                       initial="hidden"
                       animate={isInView ? "visible" : "hidden"}
-                      transition={{ delay: index * 0.2 }}
-                      colorTheme={exp.colorTheme}
+                      transition={{ delay: index * 0.3 + 0.2 }}
                     >
+                      {index + 1}
+                    </TimelineDot>
+                    
+                    <TimelineContent className="timeline-content">
                       <JobHeader>
                         <CompanyLogo color={exp.logoColor} isImage={exp.isImage}>
-                                                     {exp.isImage ? (
-                             <img src={`/images/${exp.companyLogo}.${exp.companyLogo === 'Beituo' ? 'jpg' : exp.companyLogo === 'biomerieux' ? 'svg' : 'png'}`} alt={exp.company} onError={(e) => {
-                               console.error('Failed to load logo:', e);
-                               e.currentTarget.style.display = 'none';
-                             }} />
-                           ) : (
-                             exp.companyLogo
-                           )}
+                          {exp.isImage ? (
+                            <img src={`/images/${exp.companyLogo}.${exp.companyLogo === 'Beituo' ? 'jpg' : exp.companyLogo === 'biomerieux' ? 'svg' : exp.companyLogo === 'Tietoong' ? 'jpeg' : exp.companyLogo === 'ChinaMobile' ? 'png' : 'png'}`} alt={exp.company} onError={(e) => {
+                              console.error('Failed to load logo:', e);
+                              e.currentTarget.style.display = 'none';
+                            }} />
+                          ) : (
+                            exp.companyLogo
+                          )}
                         </CompanyLogo>
                         <JobInfo>
                           <JobTitle>{exp.title}</JobTitle>
@@ -385,11 +517,11 @@ const Experience = () => {
                           <TechTag key={techIndex}>{tech}</TechTag>
                         ))}
                       </TechStack>
-                    </ExperienceCard>
-                  </ExperienceItem>
+                    </TimelineContent>
+                  </TimelineItem>
                 );
               })}
-            </ExperienceContainer>
+            </TimelineContainer>
           </motion.div>
         </ExperienceContent>
       </div>

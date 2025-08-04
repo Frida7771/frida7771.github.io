@@ -91,17 +91,18 @@ const ProjectImage = styled.div<{ imageUrl: string }>`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   flex-shrink: 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: all ${theme.transitions.default};
 
   &:hover {
     transform: scale(1.02);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
   }
 
   @media (max-width: ${theme.breakpoints.md}) {
@@ -277,6 +278,14 @@ const projects = [
     image: "/images/Health_mainPage.jpg",
     techStack: ["Springboot", "Vue.js", "Algorithm", "Java"],
     githubUrl: "https://github.com/Frida7771/HealthManger",
+  },
+  {
+    id: 4,
+    title: "CloudNode",
+    description: "A cloud-based deployment automation of Node.js applications on AWS. Integrated with Terraform, auto-scaling, GitHub Actions, and Packer.",
+    image: "/images/cloudNode.png",
+    techStack: ["Node.js", "Packer", "Terraform", "AWS"],
+    githubUrl: "https://github.com/Frida7771/CloudNode",
   },
 ];
 
