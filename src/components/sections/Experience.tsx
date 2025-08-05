@@ -353,7 +353,7 @@ const Experience = () => {
     {
       title: "Software Engineer",
       company: "Beituo Paper",
-      period: "June 2021 - September 2022",
+      period: "October 2021 - December 2022",
       description: [
         "Contributed to the transformation of a legacy warehouse inventory system into a modular web app for a paper manufacturing company, while embracing test-driven development with JUnit."
       ],
@@ -379,7 +379,7 @@ const Experience = () => {
     {
       title: "Software Engineer",
       company: "China Mobile",
-      period: "July 2023 - August 2024",
+      period: "May 2023 - June 2024",
       description: [
         "Optimized IoT data data pipeline achieving 99.5% success rate, while accelerating API debugging by 30% using Spring Boot factory patterns."
       ],
