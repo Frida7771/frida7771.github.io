@@ -88,7 +88,7 @@ const ProjectImage = styled.div<{ imageUrl: string }>`
   width: 380px;
   height: 280px;
   background-image: url(${props => props.imageUrl});
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgba(255, 255, 255, 0.1);
@@ -98,6 +98,7 @@ const ProjectImage = styled.div<{ imageUrl: string }>`
   border: 2px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: all ${theme.transitions.default};
+  overflow: hidden;
 
   &:hover {
     transform: scale(1.02);
@@ -286,6 +287,14 @@ const projects = [
     image: "/images/cloudNode.png",
     techStack: ["Node.js", "Packer", "Terraform", "AWS"],
     githubUrl: "https://github.com/Frida7771/CloudNode",
+  },
+  {
+    id: 5,
+    title: "Smart Home",
+    description: "A comprehensive smart home automation system built with Java. The system provides an intuitive user interface for controlling various smart devices and managing home automation scenarios.",
+    image: "/images/smartHome.jpg",
+    techStack: ["Java", "Design Patterns", "Object-Oriented Design"],
+    githubUrl: "https://github.com/Frida7771/SmartHome",
   },
 ];
 
