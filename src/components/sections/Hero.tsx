@@ -213,7 +213,7 @@ export const Hero = () => {
         <HeroContent>
           <Greeting>
             <GreetingText>Hi, I am</GreetingText>
-            <Name>Bo Li</Name>
+            <Name>Frida</Name>
           </Greeting>
           
           <ProfileSection>
@@ -267,7 +267,7 @@ export const Hero = () => {
               <span className="sr-only">LinkedIn</span>
             </a>
             <a 
-              href="mailto:li.bo10@northeastern.edu"
+              href="mailto:frida16571@gmail.com"
               aria-label="Send me an email"
             >
               <Suspense fallback={<div style={{ width: '1.5rem', height: '1.5rem' }} />}>

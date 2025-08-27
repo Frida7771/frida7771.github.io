@@ -342,7 +342,7 @@ const Experience = () => {
       company: "Tietong Telecommunications",
       period: "October 2020 - December 2020",
       description: [
-        "Performed comprehensive software testing and quality assurance for OSS systems, ensuring high reliability and performance standards."
+        "Performed comprehensive software testing and quality assurance for CRM systems, ensuring high reliability and performance standards."
       ],
       tech: ["Software Testing", "Selenium", "Jenkins", "Java"],
       logoColor: "#1E3A8A",
@@ -352,16 +352,16 @@ const Experience = () => {
     },
     {
       title: "Software Engineer",
-      company: "Beituo Paper",
+      company: "Yonyou Network Technology",
       period: "October 2021 - December 2022",
       description: [
-        "Contributed to the transformation of a legacy warehouse inventory system into a modular web app for a paper manufacturing company, while embracing test-driven development with JUnit."
+        "Contributed to the transformation of a legacy warehouse inventory system into a modular web app for a paper manufacturing company, while embracing test-driven development with Unit test."
       ],
       tech: ["React", "Java", "Mysql", "Web Development"],
       logoColor: "#8B4513",
-      companyLogo: "Beituo",
+      companyLogo: "yonyou-logo",
       isImage: true,
-      colorTheme: 'beituo'
+      colorTheme: 'yonyou'
     },
     {
       title: "Data Analyst Intern",
@@ -370,7 +370,7 @@ const Experience = () => {
       description: [
         "Conducted data analysis at a medical diagnostics company,supporting decision-making for 1400+ healthcare clients."
       ],
-      tech: ["Data Analysis", "T-SQL", "SQL Server"],
+      tech: ["Data Analysis", " Python", "T-SQL", "SQL Server"],
       logoColor: "#4A90E2",
       companyLogo: "biomerieux",
       isImage: true,
@@ -381,9 +381,9 @@ const Experience = () => {
       company: "China Mobile",
       period: "May 2023 - June 2024",
       description: [
-        "Optimized IoT data data pipeline achieving 99.5% success rate, while accelerating API debugging by 30% using Spring Boot factory patterns."
+        "Optimized IoT data data pipeline achieving 99.5% success rate, while accelerating API debugging by 30% using Spring Boot design patterns."
       ],
-      tech: ["Python", "Springboot", "PostgreSQL", "Agile"],
+      tech: ["Python", "Springboot", "Agile"],
       logoColor: "#0066CC",
       companyLogo: "ChinaMobile",
       isImage: true,

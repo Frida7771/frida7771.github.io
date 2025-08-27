@@ -240,17 +240,17 @@ const Contact = () => {
               Whether you have a question or just want to say hi, feel free to reach out!
             </ContactText>
             <ContactEmail 
-              href="mailto:li.bo10@northeastern.edu"
+              href="mailto:frida16571@gmail.com"
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              aria-label="Send me an email at li.bo10@northeastern.edu"
+              aria-label="Send me an email at frida16571@gmail.com"
             >
               <FaEnvelope aria-hidden="true" />
-              <span>li.bo10@northeastern.edu</span>
+              <span>frida16571@gmail.com</span>
             </ContactEmail>
             <DownloadResumeButton 
-              href="https://drive.google.com/file/d/18X-VneIEKrMatlO0cMVGPfgOAqOEAnAl/view?usp=sharing"
+              href="https://drive.google.com/file/d/1SIcK8AeXLXSI5bnomwVzvSB1Wu59j7A7/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               variants={itemVariants}
