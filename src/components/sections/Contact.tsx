@@ -250,7 +250,7 @@ const Contact = () => {
               <span>frida16571@gmail.com</span>
             </ContactEmail>
             <DownloadResumeButton 
-              href="https://drive.google.com/file/d/1SIcK8AeXLXSI5bnomwVzvSB1Wu59j7A7/view?usp=sharing"
+              href="https://drive.google.com/file/d/18X-VneIEKrMatlO0cMVGPfgOAqOEAnAl/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               variants={itemVariants}

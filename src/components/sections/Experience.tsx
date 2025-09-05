@@ -338,19 +338,6 @@ const TechTag = styled.span`
 const Experience = () => {
   const experiences = [
     {
-      title: "QA Software Engineer Intern",
-      company: "Tietong Telecommunications",
-      period: "October 2020 - December 2020",
-      description: [
-        "Performed comprehensive software testing and quality assurance for CRM systems, ensuring high reliability and performance standards."
-      ],
-      tech: ["Software Testing", "Selenium", "Jenkins", "Java"],
-      logoColor: "#1E3A8A",
-      companyLogo: "Tietoong",
-      isImage: true,
-      colorTheme: 'tietong'
-    },
-    {
       title: "Software Engineer",
       company: "Yonyou Network Technology",
       period: "October 2021 - December 2022",
@@ -381,9 +368,9 @@ const Experience = () => {
       company: "China Mobile",
       period: "May 2023 - June 2024",
       description: [
-        "Optimized IoT data data pipeline achieving 99.5% success rate, while accelerating API debugging by 30% using Spring Boot design patterns."
+        "Managed 1000+ e-books and journals by developing a cross-platform mobile application using JavaScript, React Native and C#."
       ],
-      tech: ["Python", "Springboot", "Agile"],
+      tech: ["PostgreSQL", "React Native", ".NET"],
       logoColor: "#0066CC",
       companyLogo: "ChinaMobile",
       isImage: true,
