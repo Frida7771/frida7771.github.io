@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { theme } from '../../styles/theme';
-import { FaEnvelope, FaGithub, FaLinkedin, FaDownload, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const ContactSection = styled.section`
   position: relative;
@@ -80,79 +80,6 @@ const ContactText = styled(motion.p)`
   }
 `;
 
-const ContactEmail = styled(motion.a)`
-  display: inline-flex;
-  align-items: center;
-  gap: ${theme.spacing.sm};
-  font-size: clamp(0.9rem, 2vw, 1.3rem);
-  color: ${theme.colors.accent};
-  margin-bottom: ${theme.spacing.lg};
-  padding: ${theme.spacing.sm} ${theme.spacing.lg};
-  border-radius: 30px;
-  transition: all ${theme.transitions.default};
-  font-weight: 500;
-  background: ${theme.colors.glass.card};
-  border: 1px solid ${theme.colors.accent};
-  word-break: break-all;
-
-  @media (min-width: ${theme.breakpoints.sm}) {
-    word-break: normal;
-    padding: ${theme.spacing.md} ${theme.spacing.lg};
-  }
-
-  svg {
-    font-size: 1.2em;
-    flex-shrink: 0;
-
-    @media (min-width: ${theme.breakpoints.md}) {
-      font-size: 1.4em;
-    }
-  }
-
-  &:hover {
-    background: ${theme.colors.gradient.accent};
-    color: ${theme.colors.textDark};
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px ${theme.colors.overlay.dark};
-  }
-`;
-
-const DownloadResumeButton = styled(motion.a)`
-  display: inline-flex;
-  align-items: center;
-  gap: ${theme.spacing.sm};
-  font-size: clamp(0.9rem, 2vw, 1.3rem);
-  color: ${theme.colors.accent};
-  margin-bottom: ${theme.spacing.lg};
-  padding: ${theme.spacing.sm} ${theme.spacing.lg};
-  border-radius: 30px;
-  transition: all ${theme.transitions.default};
-  font-weight: 500;
-  background: ${theme.colors.glass.card};
-  border: 1px solid ${theme.colors.accent};
-  text-decoration: none;
-  cursor: pointer;
-
-  @media (min-width: ${theme.breakpoints.sm}) {
-    padding: ${theme.spacing.md} ${theme.spacing.lg};
-  }
-
-  svg {
-    font-size: 1.2em;
-    flex-shrink: 0;
-
-    @media (min-width: ${theme.breakpoints.md}) {
-      font-size: 1.4em;
-    }
-  }
-
-  &:hover {
-    background: ${theme.colors.gradient.accent};
-    color: ${theme.colors.textDark};
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px ${theme.colors.overlay.dark};
-  }
-`;
 
 const SocialLinks = styled(motion.div)`
   display: flex;
