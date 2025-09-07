@@ -228,7 +228,7 @@ export const AboutMe = () => {
               The goal is to reduce manual DevOps effort and ensure a reliable backend for modern web applications.
             </p>
             <p> 
-              Beyond my professional endeavors, I find balance and joy through playing the piano, 
+              Beyond my professional endeavors, I find balance and joy through playing piano, 
               challenging myself with long runs, and staying energized with Zumba.
             </p>
           </AboutText>
