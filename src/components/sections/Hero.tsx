@@ -6,6 +6,7 @@ import boPhoto from '../../assets/images/Bo.jpg';
 const FaGithub = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaGithub })));
 const FaLinkedin = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaLinkedin })));
 const FaEnvelope = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaEnvelope })));
+const FaInstagram = lazy(() => import('react-icons/fa').then(mod => ({ default: mod.FaInstagram })));
 
 const HeroSection = styled.section`
   min-height: 100vh;
@@ -274,6 +275,17 @@ export const Hero = () => {
                 <FaEnvelope aria-hidden="true" />
               </Suspense>
               <span className="sr-only">Email</span>
+            </a>
+            <a 
+              href="https://www.instagram.com/frida_77711/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Visit my Instagram profile"
+            >
+              <Suspense fallback={<div style={{ width: '1.5rem', height: '1.5rem' }} />}>
+                <FaInstagram aria-hidden="true" />
+              </Suspense>
+              <span className="sr-only">Instagram</span>
             </a>
           </SocialLinks>
         </HeroContent>

@@ -368,7 +368,7 @@ const Experience = () => {
       company: "China Mobile",
       period: "May 2023 - June 2024",
       description: [
-        "Managed 1000+ e-books and journals by developing a cross-platform mobile application using JavaScript, React Native and C#."
+        "Managed 1000+ e-books and journals by developing a cross-platform mobile application using JavaScript, React and C#."
       ],
       tech: ["PostgreSQL", "React Native", ".NET"],
       logoColor: "#0066CC",
