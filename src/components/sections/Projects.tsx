@@ -282,6 +282,14 @@ const projects = [
   },
   {
     id: 4,
+    title: "SmartChess",
+    description: "An intelligent chess game engine featuring Minimax algorithm with Alpha-Beta pruning for AI opponents, implementing core chess logic with data structures and the minimax algorithm.",
+    image: "/images/smartchess.jpg",
+    techStack: ["Java", "Algorithm", "Android Studio"],
+    githubUrl: "https://github.com/Frida7771/smartchess",
+  },
+  {
+    id: 5,
     title: "CloudNode",
     description: "A cloud-based deployment automation of Node.js applications on AWS. Integrated with Terraform, auto-scaling, GitHub Actions, and Packer.",
     image: "/images/cloudNode.png",
@@ -289,7 +297,7 @@ const projects = [
     githubUrl: "https://github.com/Frida7771/CloudNode",
   },
   {
-    id: 5,
+    id: 6,
     title: "Smart Home",
     description: "A comprehensive smart home automation system built with Java. The system provides an intuitive user interface for controlling various smart devices and managing home automation scenarios.",
     image: "/images/smartHome.jpg",
