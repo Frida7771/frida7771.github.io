@@ -214,7 +214,7 @@ export const Hero = () => {
         <HeroContent>
           <Greeting>
             <GreetingText>Hi, I am</GreetingText>
-            <Name>Frida</Name>
+            <Name>Bo</Name>
           </Greeting>
           
           <ProfileSection>
