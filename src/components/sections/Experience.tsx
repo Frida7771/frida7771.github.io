@@ -168,6 +168,8 @@ const TimelineDot = styled(motion.div)<{ colorTheme: string }>`
         return 'linear-gradient(135deg, #4682B4, #191970)';
       case 'tietong':
         return 'linear-gradient(135deg, #1E3A8A, #0F172A)';
+      case 'rtc':
+        return 'linear-gradient(135deg, #FF6B6B, #FF8E8E)';
       default:
         return 'linear-gradient(135deg, #9370DB, #4B0082)';
     }
@@ -338,6 +340,19 @@ const TechTag = styled.span`
 const Experience = () => {
   const experiences = [
     {
+      title: "Community Contributor",
+      company: "Rewriting the Code",
+      period: "Aug. 2025 - Present",
+      description: [
+        "Contributing to open source projects and community initiatives focused on code quality and best practices."
+      ],
+      tech: ["Open Source", "Community", "Code Review", "Mentoring"],
+      logoColor: "#FF6B6B",
+      companyLogo: "RTC_share",
+      isImage: true,
+      colorTheme: 'rtc'
+    },
+    {
       title: "Software Engineer",
       company: "Yonyou Network Technology",
       period: "October 2021 - December 2022",
@@ -363,19 +378,6 @@ const Experience = () => {
       isImage: true,
       colorTheme: 'biomerieux'
     },
-    {
-      title: "Software Engineer",
-      company: "China Mobile",
-      period: "May 2023 - June 2024",
-      description: [
-        "Managed 1000+ e-books and journals by developing a cross-platform mobile application using JavaScript, React and C#."
-      ],
-      tech: ["PostgreSQL", "React Native", ".NET"],
-      logoColor: "#0066CC",
-      companyLogo: "ChinaMobile",
-      isImage: true,
-      colorTheme: 'zealquest'
-    }
   ];
 
   const containerVariants = {
@@ -470,7 +472,7 @@ const Experience = () => {
                       <JobHeader>
                         <CompanyLogo color={exp.logoColor} isImage={exp.isImage}>
                           {exp.isImage ? (
-                            <img src={`/images/${exp.companyLogo}.${exp.companyLogo === 'Beituo' ? 'jpg' : exp.companyLogo === 'biomerieux' ? 'svg' : exp.companyLogo === 'Tietoong' ? 'jpeg' : exp.companyLogo === 'ChinaMobile' ? 'png' : 'png'}`} alt={exp.company} onError={(e) => {
+                            <img src={`/images/${exp.companyLogo}.${exp.companyLogo === 'RTC_share' ? 'jpg' : exp.companyLogo === 'Beituo' ? 'jpg' : exp.companyLogo === 'biomerieux' ? 'svg' : exp.companyLogo === 'Tietoong' ? 'jpeg' : exp.companyLogo === 'ChinaMobile' ? 'png' : 'png'}`} alt={exp.company} onError={(e) => {
                               console.error('Failed to load logo:', e);
                               e.currentTarget.style.display = 'none';
                             }} />

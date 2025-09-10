@@ -282,11 +282,11 @@ const projects = [
   },
   {
     id: 4,
-    title: "SmartChess",
-    description: "An intelligent chess game engine featuring Minimax algorithm with Alpha-Beta pruning for AI opponents, implementing core chess logic with data structures and the minimax algorithm.",
-    image: "/images/smartchess.jpg",
+    title: "CN-SmartChess",
+    description: "An intelligent chess game engine featuring Minimax algorithm with Alpha-Beta pruning for AI opponents, implementing core chess logic with advanced data structures and algorithm.",
+    image: "/images/cnchess.jpg",
     techStack: ["Java", "Algorithm", "Android Studio"],
-    githubUrl: "https://github.com/Frida7771/smartchess",
+    githubUrl: "https://github.com/Frida7771/ChineseChess",
   },
   {
     id: 5,
