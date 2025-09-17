@@ -294,7 +294,7 @@ const projects = [
     description: "A cloud-based deployment automation of Node.js applications on AWS. Integrated with Terraform, auto-scaling, GitHub Actions, and Packer.",
     image: "/images/cloudNode.png",
     techStack: ["Node.js", "Packer", "Terraform", "AWS"],
-    githubUrl: "https://github.com/Frida7771/CloudNode",
+    githubUrl: "https://github.com/Frida7771/CloudNode-",
   },
   {
     id: 6,
@@ -303,6 +303,14 @@ const projects = [
     image: "/images/smartHome.jpg",
     techStack: ["Java", "Design Patterns", "Object-Oriented Design"],
     githubUrl: "https://github.com/Frida7771/SmartHome",
+  },
+  {
+    id: 7,
+    title: "Team Flow",
+    description: "A modern team collaboration and project management platform built with Next.js, Node.js, GraphQL and PostgreSQL. Features include user authentication, project management, task management with drag-and-drop status updates, and real-time updates on project activities.",
+    image: "/images/teamFlow.jpeg",
+    techStack: ["Next.js", "Node.js", "GraphQL", "PostgreSQL", "WebSocket"],
+    githubUrl: "https://github.com/Frida7771/Team-Flow",
   },
 ];
 
