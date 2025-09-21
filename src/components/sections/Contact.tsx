@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { theme } from '../../styles/theme';
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 const ContactSection = styled.section`
   position: relative;
@@ -203,6 +203,15 @@ const Contact = () => {
               >
                 <FaInstagram aria-hidden="true" />
                 <span className="sr-only">Instagram</span>
+              </SocialLink>
+              <SocialLink 
+                href="mailto:frida16571@gmail.com"
+                whileHover={{ y: -5 }}
+                role="listitem"
+                aria-label="Send me an email"
+              >
+                <FaEnvelope aria-hidden="true" />
+                <span className="sr-only">Email</span>
               </SocialLink>
             </SocialLinks>
           </ContactContent>

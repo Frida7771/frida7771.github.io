@@ -354,6 +354,32 @@ const Experience = () => {
     },
     {
       title: "Software Engineer",
+      company: "China Mobile",
+      period: "May 2023 - June 2024",
+      description: [
+        "Developed Java-based loyalty rewards platform and lottery-draw HTTP interface to increace customer engagement."
+      ],
+      tech: ["Java", "Redis", "Backend", "Code Review"],
+      logoColor: "#4A90E2",
+      companyLogo: "ChinaMobile",
+      isImage: true,
+      colorTheme: 'ChinaMobile'
+    },
+    {
+      title: "Data Engineer Intern",
+      company: "BioMérieux",
+      period: "February 2023 - April 2023",
+      description: [
+        "Built data pipelines and streamlined data analysis at a medical diagnostics company,supporting decision-making for 1400+ healthcare clients."
+      ],
+      tech: ["Data Analysis", " Python", "T-SQL", "SQL Server"],
+      logoColor: "#4A90E2",
+      companyLogo: "biomerieux",
+      isImage: true,
+      colorTheme: 'biomerieux'
+    },
+    {
+      title: "Software Engineer",
       company: "Yonyou Network Technology",
       period: "October 2021 - December 2022",
       description: [
@@ -365,19 +391,7 @@ const Experience = () => {
       isImage: true,
       colorTheme: 'yonyou'
     },
-    {
-      title: "Data Analyst Intern",
-      company: "BioMérieux",
-      period: "February 2023 - April 2023",
-      description: [
-        "Conducted data analysis at a medical diagnostics company,supporting decision-making for 1400+ healthcare clients."
-      ],
-      tech: ["Data Analysis", " Python", "T-SQL", "SQL Server"],
-      logoColor: "#4A90E2",
-      companyLogo: "biomerieux",
-      isImage: true,
-      colorTheme: 'biomerieux'
-    },
+    
   ];
 
   const containerVariants = {
