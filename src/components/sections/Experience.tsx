@@ -344,9 +344,9 @@ const Experience = () => {
       company: "Rewriting the Code",
       period: "Aug. 2025 - Present",
       description: [
-        "Contributing to open source projects and community initiatives focused on code quality and best practices."
+        "Connecting with community of 35,000+ women technologists through mentorship program and technical workshops, building international network while strengthening leadership, communication, collaboration and problem-solving skills."
       ],
-      tech: ["Open Source", "Community", "Code Review", "Mentoring"],
+      tech: ["Open Source", "Community", "problem-solving", "Mentoring"],
       logoColor: "#FF6B6B",
       companyLogo: "RTC_share",
       isImage: true,
@@ -357,9 +357,9 @@ const Experience = () => {
       company: "China Mobile",
       period: "May 2023 - June 2024",
       description: [
-        "Developed Java-based loyalty rewards platform and lottery-draw HTTP interface to increace customer engagement."
+        "Developed Java-based Smart Meeting Room platform. Implemented end-to-end automated flow covering meeting booking, IoT devices control, and e-ink nameplate via HTTP, Modbus and MQTT protocols."
       ],
-      tech: ["Java", "Redis", "Backend", "Code Review"],
+      tech: ["Java", "Redis", "Backend", "MQTT", "Code Review"],
       logoColor: "#4A90E2",
       companyLogo: "ChinaMobile",
       isImage: true,
