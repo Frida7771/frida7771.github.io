@@ -357,9 +357,9 @@ const Experience = () => {
       company: "China Mobile",
       period: "May 2023 - June 2024",
       description: [
-        "Developed Java-based Smart Meeting Room platform. Implemented end-to-end automated flow covering meeting booking, IoT devices control, and e-ink nameplate via HTTP, Modbus and MQTT protocols."
+        "Developed AI-powered crop monitoring system. Implemented end-to-end automated flow covering crop monitoring, data analysis, and decision-making."
       ],
-      tech: ["Java", "Redis", "Backend", "MQTT", "Code Review"],
+      tech: ["Java", "Python", "Machine Learning", "MQTT", "Code Review"],
       logoColor: "#4A90E2",
       companyLogo: "ChinaMobile",
       isImage: true,
