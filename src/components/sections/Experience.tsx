@@ -357,9 +357,9 @@ const Experience = () => {
       company: "China Mobile",
       period: "May 2023 - June 2024",
       description: [
-        "Developed AI-powered crop monitoring system. Implemented end-to-end automated flow covering crop monitoring, data analysis, and decision-making."
+        "Developed a meeting management system using Java. Automated entire workflow, integrating IoT device control and nameplate updates via HTTP, Modbus and MQTT protocols"
       ],
-      tech: ["Java", "Python", "Machine Learning", "MQTT", "Code Review"],
+      tech: ["Java", "MQTT", "MySQL","Code Review"],
       logoColor: "#4A90E2",
       companyLogo: "ChinaMobile",
       isImage: true,
@@ -383,7 +383,7 @@ const Experience = () => {
       company: "Yonyou Network Technology",
       period: "October 2021 - December 2022",
       description: [
-        "Contributed to the transformation of a legacy warehouse inventory system into a modular web app for a paper manufacturing company, while embracing test-driven development with Unit test."
+        "Built a collaboration cloud platform for a paper manufacturing client on AWS with Flowable BPM engine"
       ],
       tech: ["React", "Java", "Mysql", "Web Development"],
       logoColor: "#8B4513",

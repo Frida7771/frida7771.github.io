@@ -282,10 +282,10 @@ const projects = [
   },
   {
     id: 4,
-    title: "CN-SmartChess",
-    description: "An intelligent chess game engine featuring Minimax algorithm with Alpha-Beta pruning for AI opponents, implementing core chess logic with advanced data structures and algorithm.",
+    title: "JChineseChess",
+    description: "A comprehensive Android Chinese chess application built with Java 17, featuring an AI-powered game engine based on xqwlight with Alpha-Beta pruning search algorithm. The app provides intelligent human-computer gameplay with configurable AI difficulty levels, move history tracking with undo functionality, game settings customization (sound effects, piece styles, handicap options), and an intuitive Material Design interface. Implemented advanced optimizations including transposition tables, killer move heuristics, and history-based move ordering to achieve 10x performance improvement in search speed.",
     image: "/images/cnchess.jpg",
-    techStack: ["Java", "Algorithm", "Android Studio"],
+    techStack: ["Java 17", "Android SDK", "Alpha-Beta Algorithm", "Material Design", "ViewBinding"],
     githubUrl: "https://github.com/Frida7771/ChineseChess",
   },
   {
