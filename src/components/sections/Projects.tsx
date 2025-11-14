@@ -257,14 +257,6 @@ const GitHubButton = styled(motion.a)`
 
 const projects = [
   {
-    id: 1,
-    title: "Jobhand",
-    description: "A MERN-based job tracking platform with OAuth login, real-time CRUD operations, and cloud deployment for a smooth and secure user experience.",
-    image: "/images/Jobhand.jpg",
-    techStack: ["React", "Node.js", "MongoDB", "Express"],
-    githubUrl: "https://github.com/Frida7771/jobhand",
-  },
-  {
     id: 2,
     title: "Flavor Lab",
     description: "A full-stack food sharing and recipe management platform designed for community-driven cooking inspiration. Users can create, manage, and share recipes through an intuitive interface with secure authentication and admin moderation.",
