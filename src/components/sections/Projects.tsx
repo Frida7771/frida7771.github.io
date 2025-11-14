@@ -269,7 +269,7 @@ const projects = [
     title: "JChineseChess",
     description: "A comprehensive Android Chinese chess application, featuring an AI-powered opponent.",
     image: "/images/cnchess.jpg",
-    techStack: ["Java 17", "Android SDK", "Alpha-Beta Algorithm", "Material Design", "ViewBinding"],
+    techStack: ["Java", "Android SDK", "Alpha-Beta Algorithm", "Material Design", "ViewBinding"],
     githubUrl: "https://github.com/Frida7771/ChineseChess",
   },
   {
