@@ -342,7 +342,7 @@ const Experience = () => {
     {
       title: "Community Contributor",
       company: "Rewriting the Code",
-      period: "Aug. 2025 - Present",
+      period: "August 2025 - Present",
       description: [
         "Connecting with community of 35,000+ women technologists through mentorship program and technical workshop."
       ],
