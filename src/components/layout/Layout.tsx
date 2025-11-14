@@ -214,8 +214,8 @@ export const Layout = ({ children }: LayoutProps) => {
             <NavLinks>
               <a href="#hero" aria-label="Home section">HOME</a>
               <a href="#about" aria-label="About section">ABOUT</a>
-              <a href="#projects" aria-label="Projects section">PROJECTS</a>
               <a href="#experience" aria-label="Experience section">EXPERIENCE</a>
+              <a href="#projects" aria-label="Projects section">PROJECTS</a>
               <a href="#contact" aria-label="Contact section">CONTACT</a>
             </NavLinks>
           </div>

@@ -222,11 +222,6 @@ export const AboutMe = () => {
             I have over 1.5 years of experience in software engineering and web development. 
             I enjoy exploring new technologies and improving my skills through hands-on projects and real-world challenges.
             </p>
-            <p>
-              I am currently working on a cloud infrastructure automation project to streamline web application deployment. 
-              It leverages AWS (EC2, RDS, S3), automates provisioning with Terraform, and integrates GitHub Actions and Packer to standardize builds and speed up deployments. 
-              The goal is to reduce manual DevOps effort and ensure a reliable backend for modern web applications.
-            </p>
             <p> 
               Beyond my professional endeavors, I find balance and joy through playing piano, 
               challenging myself with long runs, and staying energized with Zumba.

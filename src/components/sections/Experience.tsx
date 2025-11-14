@@ -344,7 +344,7 @@ const Experience = () => {
       company: "Rewriting the Code",
       period: "Aug. 2025 - Present",
       description: [
-        "Connecting with community of 35,000+ women technologists through mentorship program and technical workshops, building international network while strengthening leadership, communication, collaboration and problem-solving skills."
+        "Connecting with community of 35,000+ women technologists through mentorship program and technical workshop."
       ],
       tech: ["Open Source", "Community", "problem-solving", "Mentoring"],
       logoColor: "#FF6B6B",
@@ -355,11 +355,11 @@ const Experience = () => {
     {
       title: "Software Engineer",
       company: "China Mobile",
-      period: "May 2023 - June 2024",
+      period: "July 2023 - August 2024",
       description: [
-        "Developed a meeting management system using Java. Automated entire workflow, integrating IoT device control and nameplate updates via HTTP, Modbus and MQTT protocols"
+        "Developed and optimized a large-scale 5G private network platform using Golang, Kubernetes, Kafka, Flink, and Elasticsearch to process millions of records monthly and support low-latency edge applications"
       ],
-      tech: ["Java", "MQTT", "MySQL","Code Review"],
+      tech: ["Go", "MQTT", "5G"],
       logoColor: "#4A90E2",
       companyLogo: "ChinaMobile",
       isImage: true,
@@ -379,13 +379,26 @@ const Experience = () => {
       colorTheme: 'biomerieux'
     },
     {
+      title: "Research Assistant",
+      company: "Southwest Petroleum University",
+      period: "September 2022 - December 2022",
+      description: [
+        "Implemented the software operation module for an intelligent agent system with natural interaction, cognitive decision-making, and autonomous control capabilities."
+      ],
+      tech: ["RPA", " Python", "C++"],
+      logoColor: "#4A90E2",
+      companyLogo: "swpu",
+      isImage: true,
+      colorTheme: 'swpu'
+    },
+    {
       title: "Software Engineer",
       company: "Yonyou Network Technology",
-      period: "October 2021 - December 2022",
+      period: "Jun 2021 - May 2022",
       description: [
-        "Built a collaboration cloud platform for a paper manufacturing client on AWS with Flowable BPM engine"
+        "Built client-facing web application, while integrating AWS S3 for secure, indexed file storage for 300+ employees."
       ],
-      tech: ["React", "Java", "Mysql", "Web Development"],
+      tech: ["React", "Java", "PostgreSQL", "Web Development"],
       logoColor: "#8B4513",
       companyLogo: "yonyou-logo",
       isImage: true,

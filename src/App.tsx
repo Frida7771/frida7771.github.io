@@ -39,11 +39,11 @@ function App() {
         <AboutMe />
         
         {/* Wrap non-critical sections in Suspense */}
-        <Suspense fallback={<LoadingFallback>Loading projects...</LoadingFallback>}>
-          <Projects />
-        </Suspense>
         <Suspense fallback={<LoadingFallback>Loading experience...</LoadingFallback>}>
           <Experience />
+        </Suspense>
+        <Suspense fallback={<LoadingFallback>Loading projects...</LoadingFallback>}>
+          <Projects />
         </Suspense>
         <Suspense fallback={<LoadingFallback>Loading contact...</LoadingFallback>}>
           <Contact />

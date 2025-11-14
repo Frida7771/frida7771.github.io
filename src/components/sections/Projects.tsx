@@ -273,17 +273,9 @@ const projects = [
     githubUrl: "https://github.com/Frida7771/Flavor-Lab",
   },
   {
-    id: 3,
-    title: "Health Manager",
-    description: "A health management platform built with Java Spring Boot and Vue.js, offering features like personalized health record tracking, secure file uploads, interactive data visualization, and AI-powered health news and recommendations. Includes JWT-based authentication and efficient search with trie-structured indexing.",
-    image: "/images/Health_mainPage.jpg",
-    techStack: ["Springboot", "Vue.js", "Algorithm", "Java"],
-    githubUrl: "https://github.com/Frida7771/HealthManger",
-  },
-  {
     id: 4,
     title: "JChineseChess",
-    description: "A comprehensive Android Chinese chess application built with Java 17, featuring an AI-powered game engine based on xqwlight with Alpha-Beta pruning search algorithm. The app provides intelligent human-computer gameplay with configurable AI difficulty levels, move history tracking with undo functionality, game settings customization (sound effects, piece styles, handicap options), and an intuitive Material Design interface. Implemented advanced optimizations including transposition tables, killer move heuristics, and history-based move ordering to achieve 10x performance improvement in search speed.",
+    description: "A comprehensive Android Chinese chess application, featuring an AI-powered opponent.",
     image: "/images/cnchess.jpg",
     techStack: ["Java 17", "Android SDK", "Alpha-Beta Algorithm", "Material Design", "ViewBinding"],
     githubUrl: "https://github.com/Frida7771/ChineseChess",
@@ -303,14 +295,6 @@ const projects = [
     image: "/images/smartHome.jpg",
     techStack: ["Java", "Design Patterns", "Object-Oriented Design"],
     githubUrl: "https://github.com/Frida7771/SmartHome",
-  },
-  {
-    id: 7,
-    title: "Team Flow",
-    description: "A modern team collaboration and project management platform built with Next.js, Node.js, GraphQL and PostgreSQL. Features include user authentication, project management, task management with drag-and-drop status updates, and real-time updates on project activities.",
-    image: "/images/teamFlow.jpeg",
-    techStack: ["Next.js", "Node.js", "GraphQL", "PostgreSQL", "WebSocket"],
-    githubUrl: "https://github.com/Frida7771/Team-Flow",
   },
 ];
 
