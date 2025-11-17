@@ -391,19 +391,6 @@ const Experience = () => {
       isImage: true,
       colorTheme: 'swpu'
     },
-    {
-      title: "Software Engineer",
-      company: "Yonyou Network Technology",
-      period: "Jun 2021 - May 2022",
-      description: [
-        "Built client-facing web application, while integrating AWS S3 for secure, indexed file storage for 300+ employees."
-      ],
-      tech: ["React", "Java", "PostgreSQL", "Web Development"],
-      logoColor: "#8B4513",
-      companyLogo: "yonyou-logo",
-      isImage: true,
-      colorTheme: 'yonyou'
-    },
     
   ];
 
