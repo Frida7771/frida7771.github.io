@@ -340,19 +340,6 @@ const TechTag = styled.span`
 const Experience = () => {
   const experiences = [
     {
-      title: "Software Engineer Intern",
-      company: "Beituo Paper",
-      period: "May 2025 - August 2025",
-      description: [
-        "Built a full-stack web application，improving site traffic and accelerating analytics performance"
-      ],
-      tech: ["React", " Python", "Django"],
-      logoColor: "#4A90E2",
-      companyLogo: "Beituo",
-      isImage: true,
-      colorTheme: 'beituo'
-    },
-    {
       title: "Community Contributor",
       company: "Rewriting the Code",
       period: "August 2025 - Present",
