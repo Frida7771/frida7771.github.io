@@ -340,6 +340,19 @@ const TechTag = styled.span`
 const Experience = () => {
   const experiences = [
     {
+      title: "Software Engineer Intern",
+      company: "Beituo Paper",
+      period: "May 2025 - August 2025",
+      description: [
+        "Built a full-stack web application，improving site traffic and accelerating analytics performance"
+      ],
+      tech: ["React", " Python", "Django"],
+      logoColor: "#4A90E2",
+      companyLogo: "Beituo",
+      isImage: true,
+      colorTheme: 'beituo'
+    },
+    {
       title: "Community Contributor",
       company: "Rewriting the Code",
       period: "August 2025 - Present",
@@ -353,17 +366,17 @@ const Experience = () => {
       colorTheme: 'rtc'
     },
     {
-      title: "Software Engineer",
-      company: "China Mobile",
-      period: "July 2023 - August 2024",
+      title: "Research Assistant",
+      company: "Southwest Petroleum University",
+      period: "December 2023 - August 2024",
       description: [
-        "Developed and optimized a large-scale 5G private network platform using Golang, Kubernetes, Kafka, Flink, and Elasticsearch to process millions of records monthly and support low-latency edge applications"
+        "Implemented the software operation module for an intelligent agent system with natural interaction, cognitive decision-making, and autonomous control capabilities."
       ],
-      tech: ["Go", "MQTT", "5G"],
+      tech: ["RPA", " Python", "C++"],
       logoColor: "#4A90E2",
-      companyLogo: "ChinaMobile",
+      companyLogo: "swpu",
       isImage: true,
-      colorTheme: 'ChinaMobile'
+      colorTheme: 'swpu'
     },
     {
       title: "Data Engineer Intern",
@@ -378,19 +391,7 @@ const Experience = () => {
       isImage: true,
       colorTheme: 'biomerieux'
     },
-    {
-      title: "Research Assistant",
-      company: "Southwest Petroleum University",
-      period: "September 2022 - December 2022",
-      description: [
-        "Implemented the software operation module for an intelligent agent system with natural interaction, cognitive decision-making, and autonomous control capabilities."
-      ],
-      tech: ["RPA", " Python", "C++"],
-      logoColor: "#4A90E2",
-      companyLogo: "swpu",
-      isImage: true,
-      colorTheme: 'swpu'
-    },
+  
     
   ];
 

@@ -258,27 +258,19 @@ const GitHubButton = styled(motion.a)`
 const projects = [
   {
     id: 2,
-    title: "Flavor Lab",
-    description: "A full-stack food sharing and recipe management platform designed for community-driven cooking inspiration. Users can create, manage, and share recipes through an intuitive interface with secure authentication and admin moderation.",
+    title: "AllergyAware Recipes",
+    description: "a full-stack recipe sharing web application with a centralized allergen tracking system.",
     image: "/images/FlavorLab.jpg",
     techStack: ["React", "Typescript", "OAuth", "MongoDB"],
-    githubUrl: "https://github.com/Frida7771/Flavor-Lab",
+    githubUrl: "https://github.com/Frida7771/AllergyAware_Recipes",
   },
   {
     id: 4,
     title: "JChineseChess",
     description: "A comprehensive Android Chinese chess application, featuring an AI-powered opponent.",
     image: "/images/cnchess.jpg",
-    techStack: ["Java", "Android SDK", "Alpha-Beta Algorithm", "Material Design", "ViewBinding"],
+    techStack: ["Java", "Android SDK", "AI Engine", "Algorithm"],
     githubUrl: "https://github.com/Frida7771/ChineseChess",
-  },
-  {
-    id: 5,
-    title: "CloudNode",
-    description: "A cloud-based deployment automation of Node.js applications on AWS. Integrated with Terraform, auto-scaling, GitHub Actions, and Packer.",
-    image: "/images/cloudNode.png",
-    techStack: ["Node.js", "Packer", "Terraform", "AWS"],
-    githubUrl: "https://github.com/Frida7771/CloudNode-",
   },
   {
     id: 6,
