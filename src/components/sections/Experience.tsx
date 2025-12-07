@@ -357,9 +357,9 @@ const Experience = () => {
       company: "China Mobile",
       period: "December 2023 - August 2024",
       description: [
-        "Managed 1000+ e-books and journals for Migu Reading services by developing a responsive online platform."
+        "Built key features for the company’s recommendation system, improving performance, data quality, and experiment rollout speed."
       ],
-      tech: ["React", "JavaScript", "Java", "PostgreSQL"],
+      tech: ["React", "JavaScript", "NodeJS", "Kafka", "Graphql"],
       logoColor: "#4A90E2",
       companyLogo: "ChinaMobile",
       isImage: true,
