@@ -340,30 +340,30 @@ const TechTag = styled.span`
 const Experience = () => {
   const experiences = [
     {
-      title: "Full-Stack Developer Intern ",
-      company: "Beituo Paper",
-      period: "May 2025 - Present",
-      description: [
-        "Developed an AI-driven novel creation tool for 6 publishers, leveraging GPT-4o and real-time editing to enhance content productivity."
-      ],
-      tech: ["React", "Node.js", "GPT-4o", "AI"],
-      logoColor: "#FF6B6B",
-      companyLogo: "Beituo",
-      isImage: true,
-      colorTheme: 'beituo'
-    },
-    {
-      title: "Software Engineer",
+      title: "Software Engineer Intern",
       company: "China Mobile",
-      period: "December 2023 - August 2024",
+      period: "May 2025 - August 2025",
       description: [
-        "Built key features for the company’s recommendation system, improving performance, data quality, and experiment rollout speed."
+        "Automated meeting workflow from booking services to room setup, integrating IoT devices control."
       ],
-      tech: ["React", "JavaScript", "NodeJS", "Kafka", "Graphql"],
-      logoColor: "#4A90E2",
+      tech: ["Python", "Java", "HTTP", "MQTT"],
+      logoColor: "#FF6B6B",
       companyLogo: "ChinaMobile",
       isImage: true,
       colorTheme: 'chinaMobile'
+    },
+    {
+      title: "Research Assistant",
+      company: "",
+      period: "December 2023 - August 2024",
+      description: [
+        "Built an automation module that enabled an intelligent agent to interact naturally, make decisions, and improve itself through visual RPA automation."
+      ],
+      tech: ["Python", "OpenCV", "PyAutoGUI", "RPA"],
+      logoColor: "#4A90E2",
+      companyLogo: "swpu",
+      isImage: true,
+      colorTheme: 'swpu'
     },
     {
       title: "Data Analyst Intern",
