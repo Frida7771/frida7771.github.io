@@ -340,19 +340,6 @@ const TechTag = styled.span`
 const Experience = () => {
   const experiences = [
     {
-      title: "Software Engineer Intern",
-      company: "China Mobile",
-      period: "May 2025 - August 2025",
-      description: [
-        "Automated meeting workflow from booking services to room setup, integrating IoT devices control."
-      ],
-      tech: ["Python", "Java", "HTTP", "MQTT"],
-      logoColor: "#FF6B6B",
-      companyLogo: "ChinaMobile",
-      isImage: true,
-      colorTheme: 'chinaMobile'
-    },
-    {
       title: "Research Assistant",
       company: "",
       period: "December 2023 - August 2024",
@@ -377,6 +364,19 @@ const Experience = () => {
       companyLogo: "biomerieux",
       isImage: true,
       colorTheme: 'biomerieux'
+    },
+    {
+      title: "Software Engineer Intern",
+      company: "China Mobile",
+      period: "September 2022 - December 2022",
+      description: [
+        "Automated meeting workflow from booking services to room setup, integrating IoT devices control."
+      ],
+      tech: ["Python", "Java", "HTTP", "MQTT"],
+      logoColor: "#FF6B6B",
+      companyLogo: "ChinaMobile",
+      isImage: true,
+      colorTheme: 'chinaMobile'
     },
   
     
