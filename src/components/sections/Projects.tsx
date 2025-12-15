@@ -255,14 +255,6 @@ const GitHubButton = styled(motion.a)`
 const projects = [
   {
     id: 1,
-    title: "AI Logo Generator",
-    description: "a logo generator that uses Gemini API and Hugging Face API to create a logo based on the user's input.",
-    image: "/images/AiLogo.png",
-    techStack: ["Gemini", "Hugging Face", "Firebase","Next.js", "Tailwind CSS"],
-    githubUrl: "https://github.com/Frida7771/AI-LOGO",
-  },
-  {
-    id: 2,
     title: "AllergyAware Recipes",
     description: "a full-stack recipe sharing web application with a centralized allergen tracking system.",
     image: "/images/FlavorLab.jpg",
@@ -270,7 +262,7 @@ const projects = [
     githubUrl: "https://github.com/Frida7771/AllergyAware_Recipes",
   },
   {
-    id: 3,
+    id: 2,
     title: "Health Manager",
     description: "A platform that helps users track and understand their daily health.",
     image: "/images/Health_mainPage.jpg",
@@ -278,7 +270,7 @@ const projects = [
     githubUrl: "https://github.com/Frida7771/HealthManager",
   },
   {
-    id: 4,
+    id: 3,
     title: "JChineseChess",
     description: "A comprehensive Android Chinese chess application, featuring an AI-powered opponent.",
     image: "/images/cnchess.jpg",
@@ -286,7 +278,7 @@ const projects = [
     githubUrl: "https://github.com/Frida7771/ChineseChess",
   },
   {
-    id: 6,
+    id: 4,
     title: "Smart Home",
     description: "A comprehensive smart home automation system built with Java. The system provides an intuitive user interface for controlling various smart devices and managing home automation scenarios.",
     image: "/images/smartHome.jpg",
