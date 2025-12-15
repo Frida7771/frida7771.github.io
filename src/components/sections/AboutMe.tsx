@@ -168,18 +168,14 @@ const SkillIcon = styled.div<{ skillName?: string }>`
 
 export const AboutMe = () => {
   const skills = [
-    { icon: 'javascript.svg', name: 'javascript' },
+    { icon: 'Java.svg', name: 'java' },
+    { icon: 'go.png', name: 'go' },
+    { icon: 'python.svg', name: 'python' },
     { icon: 'react.svg', name: 'react' },
     { icon: 'nodejs.svg', name: 'nodejs' },
-    { icon: 'python.svg', name: 'python' },
-    { icon: 'Java.svg', name: 'java' },
-    { icon: 'mongodb.svg', name: 'mongodb' },
     { icon: 'Postgresql.svg', name: 'postgresql' },
     { icon: 'aws.svg', name: 'aws' },
-    { icon: 'htmlCss.svg', name: 'htmlcss' },
     { icon: 'express.png', name: 'express' },
-    { icon: 'react-native.png', name: 'react-native' },
-    { icon: 'redux.svg', name: 'redux' }
   ];
 
   const containerVariants = {
